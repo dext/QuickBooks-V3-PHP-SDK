@@ -314,8 +314,8 @@ class IPPTransaction
 	public $Tag;
 	/**
 	 * @Definition 
-                                    Product: QBO
-                                    Description: Details of the Approval Status for current transaction in QBO workflows.
+                                    Product: QBO
+                                    Description: Details of the Approval Status for current transaction in QBO workflows.
 							
 	 * @xmlType element
 	 * @xmlNamespace http://schema.intuit.com/finance/v3
@@ -350,6 +350,20 @@ class IPPTransaction
 	 * @var com\intuit\schema\finance\v3\IPPRecurringInfo
 	 */
 	public $RecurringInfo;
+	/**
+	 * @Definition 
+								Product: ALL
+								Description: Project identifier
+								References to the project this transaction
+								is associated with
+							
+	 * @xmlType element
+	 * @xmlNamespace http://schema.intuit.com/finance/v3
+	 * @xmlMinOccurs 0
+	 * @xmlName ProjectRef
+	 * @var com\intuit\schema\finance\v3\IPPReferenceType
+	 */
+	public $ProjectRef;
 
 
 } // end class IPPTransaction

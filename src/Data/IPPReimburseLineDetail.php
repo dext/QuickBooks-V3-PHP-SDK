@@ -3,17 +3,17 @@ namespace QuickBooksOnline\API\Data;
 
 /**
  * @xmlNamespace http://schema.intuit.com/finance/v3
- * @xmlType string
- * @xmlName IPPAccountSubTypeEnum
- * @var IPPAccountSubTypeEnum
+ * @xmlType ItemLineDetail
+ * @xmlName IPPReimburseLineDetail
+ * @var IPPReimburseLineDetail
  * @xmlDefinition 
-						Product: QBO
-						Description: Use Rent a room relief - Relief Claimed for relief claimed for rented room for landlords
-					
- * @xmlb Share Application Money Pending Allotment
+				Product: ALL
+				Description: Reimburse Charge Line Detail
+				for a transaction line.
+			
  */
-class IPPAccountSubTypeEnum
-	{
+class IPPReimburseLineDetail
+	extends IPPItemLineDetail	{
 
 		/**                                                                       
 		* Initializes this object, optionally with pre-defined property values    
@@ -28,7 +28,7 @@ class IPPAccountSubTypeEnum
 		{
 			foreach($keyValInitializers as $initPropName => $initPropVal)
 			{
-				if (property_exists('IPPAccountSubTypeEnum',$initPropName) || property_exists('QuickBooksOnline\API\Data\IPPAccountSubTypeEnum',$initPropName))
+				if (property_exists('IPPReimburseLineDetail',$initPropName) || property_exists('QuickBooksOnline\API\Data\IPPReimburseLineDetail',$initPropName))
 				{
 					$this->{$initPropName} = $initPropVal;
 				}
@@ -40,10 +40,6 @@ class IPPAccountSubTypeEnum
 			}
 		}
 
-		/**
-		 * @xmlType value
-		 * @var string
-		 */
-		public $value;
 
-} // end class IPPAccountSubTypeEnum
+
+} // end class IPPReimburseLineDetail
